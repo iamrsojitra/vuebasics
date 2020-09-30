@@ -5,9 +5,15 @@
     </h3>
     <div>
       <b-table striped hover :items="items" :fields="fields">
-        <span slot="angular" slot-scope="data" v-html="data.value"></span>
-        <span slot="react" slot-scope="data" v-html="data.value"></span>
-        <span slot="vue" slot-scope="data" v-html="data.value"></span>
+        <template v-slot:cell(angular)="data">
+          <span v-html="data.value"></span>
+        </template>
+        <template v-slot:cell(react)="data">
+          <span v-html="data.value"></span>
+        </template>
+        <template v-slot:cell(vue)="data">
+          <span v-html="data.value"></span>
+        </template>
       </b-table>
     </div>
   </div>
@@ -32,9 +38,9 @@ export default {
         { "#": "Approx. size (KB)", angular: "500", react: "100", vue: "80" },
         {
           "#": "Current version",
-          angular: "8.0.0",
-          react: "16.8.6",
-          vue: "2.6.10"
+          angular: "10.1.3",
+          react: "16.13.1",
+          vue: "3.0"
         },
         {
           "#": "Used by",
@@ -45,18 +51,18 @@ export default {
         {
           "#": "Github",
           angular:
-            "Watchers: 3.2K<br/>Stars: 49.7K<br/>Fork: 13.6K<br/>Contributors: 966",
+            "Watchers: 3.2K<br/>Stars: 66.4K<br/>Fork: 17.6K<br/>Contributors: 1226",
           react:
-            "Watchers: 6.6K<br/>Stars: 132.9K<br/>Fork: 24.6K<br/>Contributors: 1304",
+            "Watchers: 6.7K<br/>Stars: 157K<br/>Fork: 30.9K<br/>Contributors: 1507",
           vue:
-            "Watchers: 5.9K<br/>Stars: 144.1K<br/>Fork: 20.9K<br/>Contributors: 277"
+            "Watchers: 6.3K<br/>Stars: 173K<br/>Fork: 26.7K<br/>Contributors: 378"
         },
         { "#": "Coding speed", angular: "Slow", react: "Mediam", vue: "Fast" },
         {
           "#": "Weekly Downloads",
-          angular: "464.3K",
-          react: "5,058.6K",
-          vue: "1,004.8K"
+          angular: "563.1K",
+          react: "8,344.3 K",
+          vue: "1,940.3K"
         }
       ]
     };
