@@ -22,6 +22,6 @@ npm run lint
 
 ## Demo look
 
-https://vuestart.netlify.app/
+<a href="https://vuestart.netlify.app/" target="_blank">https://vuestart.netlify.app/</a>
 
 ![](demo.gif)
